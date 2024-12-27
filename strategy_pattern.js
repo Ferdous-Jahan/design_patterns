@@ -130,10 +130,11 @@ class RealJet extends Jet {
   }
 }
 
+// Usage
 const car = new Car();
-car.go();
+car.go(); // Output: Now I am driving
 
 const helicopter = new Helicopter();
-helicopter.go();
+helicopter.go(); // Output: Now I am flying
 
-const jet = new RealJet();
+const jet = new RealJet(); // Output: Now I am driving, Now I am flying fast, Now I am driving

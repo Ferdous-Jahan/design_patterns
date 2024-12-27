@@ -15,6 +15,7 @@ class Computer {
 /**
  * Abstract decorator class for Computer.
  * @class
+ * @abstract
  * @extends {Computer}
  */
 class ComputerDecorator extends Computer {
@@ -40,7 +41,6 @@ class ComputerDecorator extends Computer {
    * @throws {Error} If not implemented by subclass.
    */
   description() {
-    // return this.computer.description();
     throw new Error("Method 'description()' must be implemented.");
   }
 }
@@ -111,14 +111,15 @@ class Printer extends ComputerDecorator {
   }
 }
 
+// Usage
 let computer = new Computer();
-console.log(computer.description());
+console.log(computer.description()); // Output: computer
 
 computer = new Disk(computer);
-console.log(computer.description());
+console.log(computer.description()); // Output: computer and a disk
 
 computer = new Monitor(computer);
-console.log(computer.description());
+console.log(computer.description()); // Output: computer and a disk and a monitor
 
 computer = new Printer(computer);
-console.log(computer.description());
+console.log(computer.description()); // Output: computer and a disk and a monitor and a printer
