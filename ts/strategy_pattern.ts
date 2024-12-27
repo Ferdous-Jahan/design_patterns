@@ -27,6 +27,10 @@ abstract class Vehicle {
     this.goAlgorithm = goAlgorithm;
   }
 
+  setGoAlgorithm(goAlgorithm: IGoAlgorithm) {
+    this.goAlgorithm = goAlgorithm;
+  }
+
   go() {
     this.goAlgorithm.go();
   }

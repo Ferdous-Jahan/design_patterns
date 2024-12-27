@@ -2,7 +2,7 @@
  * Factory class to create database connections.
  * @class
  */
-class DataBaseFactory {
+class ConnectionFactory {
   dbType;
   /**
    * @param {string} dbType - The type of database connection to create.
@@ -15,7 +15,7 @@ class DataBaseFactory {
    * Create a database connection based on the dbType.
    * @return {connection} The database connection.
    */
-  createDatabase() {
+  createDatabaseConnection() {
     switch (this.dbType) {
       case "MySQL":
         return new MySQL();
@@ -104,18 +104,18 @@ class Oracle extends connection {
 }
 
 // Usage
-const factory = new DataBaseFactory("MySQL");
-const db = factory.createDatabase();
+const factory = new ConnectionFactory("MySQL");
+const db = factory.createDatabaseConnection();
 console.log(db.description()); // Output: MySQL Connection
 
-const factory2 = new DataBaseFactory("PostgreSQL");
-const db2 = factory2.createDatabase();
+const factory2 = new ConnectionFactory("PostgreSQL");
+const db2 = factory2.createDatabaseConnection();
 console.log(db2.description()); // Output: PostgreSQL Connection
 
-const factory3 = new DataBaseFactory("Oracle");
-const db3 = factory3.createDatabase();
+const factory3 = new ConnectionFactory("Oracle");
+const db3 = factory3.createDatabaseConnection();
 console.log(db3.description()); // Output: Oracle Connection
 
-const factory4 = new DataBaseFactory();
-const db4 = factory4.createDatabase();
+const factory4 = new ConnectionFactory();
+const db4 = factory4.createDatabaseConnection();
 console.log(db4.description()); // Output: MySQL Connection
