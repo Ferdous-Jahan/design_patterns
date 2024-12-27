@@ -24,21 +24,21 @@ Design patterns are typical solutions to common problems in software design. The
 The Strategy Pattern is a behavioral design pattern that enables selecting an algorithm's behavior at runtime. It defines a family of algorithms, encapsulates each one, and makes them interchangeable.
 
 - **JavaScript**: [strategy_pattern.js](./strategy_pattern.js)
-- **TypeScript**: [strategy_pattern.ts](./strategy_pattern.ts)
+- **TypeScript**: [strategy_pattern.ts](./ts/strategy_pattern.ts)
 
 ### Decorator Pattern
 
 The Decorator Pattern is a structural design pattern that allows behavior to be added to individual objects, either statically or dynamically, without affecting the behavior of other objects from the same class.
 
 - **JavaScript**: [decorator_pattern.js](./decorator_pattern.js)
-- **TypeScript**: [decorator_pattern.ts](./decorator_pattern.ts)
+- **TypeScript**: [decorator_pattern.ts](./ts/decorator_pattern.ts)
 
 ### Factory Pattern
 
 The Factory Pattern is a creational design pattern that provides an interface for creating objects in a superclass but allows subclasses to alter the type of objects that will be created.
 
 - **JavaScript**: [factory_pattern.js](./factory_pattern.js)
-- **TypeScript**: [factory_pattern.ts](./factory_pattern.ts)
+- **TypeScript**: [factory_pattern.ts](./ts/factory_pattern.ts)
 
 ## Usage
 
