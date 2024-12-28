@@ -21,11 +21,9 @@ class GoByFlyingFast implements IGoAlgorithm {
 }
 
 abstract class Vehicle {
-  private goAlgorithm: IGoAlgorithm;
+  constructor() {}
 
-  constructor(goAlgorithm: IGoAlgorithm) {
-    this.goAlgorithm = goAlgorithm;
-  }
+  private goAlgorithm!: IGoAlgorithm; // This is not optional. but If I don't make it optional, I need to initialize it here or in the constructor. I will look for a better way to do this.
 
   setGoAlgorithm(goAlgorithm: IGoAlgorithm) {
     this.goAlgorithm = goAlgorithm;
@@ -38,19 +36,21 @@ abstract class Vehicle {
 
 class Car extends Vehicle {
   constructor() {
-    super(new GoByDriving());
+    super();
+    this.setGoAlgorithm(new GoByDriving());
   }
 }
 
 class Helicopter extends Vehicle {
   constructor() {
-    super(new GoByFlying());
+    super();
+    this.setGoAlgorithm(new GoByFlying());
   }
 }
 
-class Jet extends Vehicle {
+abstract class Jet extends Vehicle {
   constructor() {
-    super(new GoByFlyingFast());
+    super();
   }
 }
 

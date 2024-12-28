@@ -58,7 +58,6 @@ class GoByFlyingFast extends IGoAlgorithm {
  * @abstract
  */
 class Vehicle {
-  goAlgorithm;
   constructor() {
     if (new.target === Vehicle) {
       throw new TypeError("Cannot construct Vehicle instances directly");

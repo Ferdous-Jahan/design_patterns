@@ -15,9 +15,7 @@ class GoByFlyingFast {
     }
 }
 class Vehicle {
-    constructor(goAlgorithm) {
-        this.goAlgorithm = goAlgorithm;
-    }
+    constructor() { }
     setGoAlgorithm(goAlgorithm) {
         this.goAlgorithm = goAlgorithm;
     }
@@ -27,17 +25,19 @@ class Vehicle {
 }
 class Car extends Vehicle {
     constructor() {
-        super(new GoByDriving());
+        super();
+        this.setGoAlgorithm(new GoByDriving());
     }
 }
 class Helicopter extends Vehicle {
     constructor() {
-        super(new GoByFlying());
+        super();
+        this.setGoAlgorithm(new GoByFlying());
     }
 }
 class Jet extends Vehicle {
     constructor() {
-        super(new GoByFlyingFast());
+        super();
     }
 }
 class RealJet extends Jet {
