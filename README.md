@@ -9,6 +9,8 @@ This repository contains implementations of various design patterns in JavaScrip
   - [Strategy Pattern](#strategy-pattern)
   - [Decorator Pattern](#decorator-pattern)
   - [Factory Pattern](#factory-pattern)
+  - [Factory Pattern GoF way](#factory-pattern-gof-way)
+  - [Observer Pattern](#observer-pattern)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -35,10 +37,24 @@ The Decorator Pattern is a structural design pattern that allows behavior to be 
 
 ### Factory Pattern
 
-The Factory Pattern is a creational design pattern that provides an interface for creating objects in a superclass but allows subclasses to alter the type of objects that will be created.
+The Factory Pattern is a creational design pattern that provides an interface for creating objects in a superclass.
 
 - **JavaScript**: [factory_pattern.js](./factory_pattern.js)
 - **TypeScript**: [factory_pattern.ts](./ts/factory_pattern.ts)
+
+### Factory Pattern GoF way
+
+The Factory Pattern in the GoF (Gang of Four) way is a creational design pattern that defines an interface for creating an object, but lets subclasses alter the type of objects that will be created.
+
+- **JavaScript**: [factory_pattern_GoF.js](./factory_pattern_GoF.js)
+- **TypeScript**: [factory_pattern_GoF.ts](./ts/factory_pattern_GoF.ts)
+
+### Observer Pattern
+
+The Observer Pattern is a behavioral design pattern in which an object, known as the subject, maintains a list of its dependents, called observers, and notifies them of any state changes, usually by calling one of their methods.
+
+- **JavaScript**: [observer_pattern.js](./observer_pattern.js)
+- **TypeScript**: [observer_pattern.ts](./ts/observer_pattern.ts)
 
 ## Usage
 
